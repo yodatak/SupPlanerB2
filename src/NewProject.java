@@ -5,8 +5,8 @@ import javax.swing.*;
  */
 public class NewProject extends JFrame {
     private JButton createButton;
-    private JFormattedTextField nameFormattedTextField;
+    private JFormattedTextField nameProject;
     private JTextField createANewProjectTextField;
-    private JFormattedTextField beginDateFormattedTextField;
-    private JFormattedTextField finishDateFormattedTextField;
+    private JFormattedTextField beginDate;
+    private JFormattedTextField finishDate;
 }

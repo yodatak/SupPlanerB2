@@ -24,7 +24,7 @@
           <text value="Create"/>
         </properties>
       </component>
-      <component id="4c7ec" class="javax.swing.JFormattedTextField" binding="nameFormattedTextField" default-binding="true">
+      <component id="4c7ec" class="javax.swing.JFormattedTextField" binding="nameProject">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -45,7 +45,7 @@
           <text value="Create a new Project"/>
         </properties>
       </component>
-      <component id="92309" class="javax.swing.JFormattedTextField" binding="beginDateFormattedTextField" default-binding="true">
+      <component id="92309" class="javax.swing.JFormattedTextField" binding="beginDate">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -55,7 +55,7 @@
           <text value="Begin Date"/>
         </properties>
       </component>
-      <component id="e7fe5" class="javax.swing.JFormattedTextField" binding="finishDateFormattedTextField" default-binding="true">
+      <component id="e7fe5" class="javax.swing.JFormattedTextField" binding="finishDate">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
