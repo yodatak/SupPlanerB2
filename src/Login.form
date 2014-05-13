@@ -31,7 +31,8 @@
           </grid>
         </constraints>
         <properties>
-          <text value="Myemail@gmail.com"/>
+          <text value=""/>
+          <toolTipText value="firstname.name@supinfo.com"/>
         </properties>
       </component>
       <component id="663c2" class="javax.swing.JPasswordField" binding="passwordPasswordField" default-binding="true">
@@ -41,7 +42,8 @@
           </grid>
         </constraints>
         <properties>
-          <text value="password"/>
+          <text value=""/>
+          <toolTipText value="password"/>
         </properties>
       </component>
     </children>
