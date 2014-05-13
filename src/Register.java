@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * Created by yodatak on 13/05/14.
+ * Created by sabil on 13/05/14.
  */
 public class Register extends JFrame {
     private JFormattedTextField formattedTextField1;
