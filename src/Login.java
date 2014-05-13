@@ -28,6 +28,12 @@ public class Login extends JFrame{
                 capture_this.setVisible(false);
             }
         });
+        loginButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     public static void main(String[] args) {
