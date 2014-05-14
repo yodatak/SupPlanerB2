@@ -46,11 +46,6 @@ public class Login extends JFrame{
                         frame.setVisible(true);
                         capture_this.setVisible(false);
                     }
-
-                    JFrame frame = new DashboardAll();
-                    frame.pack();
-                    frame.setVisible(true);
-                    capture_this.setVisible(false);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
