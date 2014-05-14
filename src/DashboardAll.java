@@ -25,5 +25,16 @@ public class DashboardAll extends JFrame {
                 capture_this.processWindowEvent(new WindowEvent(capture_this, WindowEvent.WINDOW_CLOSING));
             }
         });
+        newProjectButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFrame frame = new NewProject();
+                frame.setLocationRelativeTo(null);
+                frame.pack();
+                frame.setVisible(true);
+                //capture_this.setVisible(false);
+            }
+        });
     }
+
 }
