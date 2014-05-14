@@ -11,13 +11,12 @@ import java.io.PrintStream;
  * Created by sabil on 13/05/14.
  */
 public class Register extends JFrame {
-    private JFormattedTextField formattedTextField1;
+    private JTextField textField1;
     private JPasswordField passwordField1;
     private JPasswordField passwordField2;
     private JButton validateButton;
     public JPanel Register;
     private JCheckBox managerCheckBox;
-    private JTextField textField1;
 
     public Register(final Login loginFrame) throws HeadlessException {
         super("Register");
@@ -32,7 +31,7 @@ public class Register extends JFrame {
                     SocketClient sck = new SocketClient(); //On Ouvre le socket du client
                     PrintStream out = sck.out();
                     out.println("REGISTER");
-                    out.println(formattedTextField1.getText()); //On chope le texte
+                    out.println(textField1.getText()); //On chope le texte
                     out.println(managerCheckBox.isSelected() ? "MANAGER" : "EMPLOYEE"); //Manager ou pas ?
                     if(sck.request(Login.encryptPassword(new String(passwordField1.getPassword()))).equals("ACCEPTED")){ //si le pass est ok on envoi la sauce !
                         JFrame frame = new DashboardAll(loginFrame);
