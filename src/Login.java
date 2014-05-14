@@ -28,7 +28,7 @@ public class Login extends JFrame{
         registerButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame frame = new Register();
+                JFrame frame = new Register(capture_this);
                 frame.setLocationRelativeTo(null);
                 frame.pack();
                 frame.setVisible(true);
