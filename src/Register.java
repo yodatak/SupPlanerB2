@@ -17,6 +17,7 @@ public class Register extends JFrame {
     private JButton validateButton;
     public JPanel Register;
     private JCheckBox managerCheckBox;
+    private JTextField textField1;
 
     public Register(final Login loginFrame) throws HeadlessException {
         super("Register");
