@@ -7,9 +7,10 @@ import java.awt.*;
 public class NewProject extends JFrame{
     private JPanel NewProject;
     private JTextField textField1;
+    private JButton button1;
 
     public NewProject() throws HeadlessException {
-        super("Register");
+        super("NewProject"); //Le titre de la fenetre
         setContentPane(NewProject);
     }
 }
