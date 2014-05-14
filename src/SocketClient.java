@@ -13,6 +13,16 @@ public class SocketClient {
         return in.readLine();
     }
 
+    public PrintStream out() throws IOException {
+        PrintStream out = new PrintStream(socket.getOutputStream());
+        return out;
+    }
+
+    public BufferedReader in() throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+        return in;
+    }
+
     public SocketClient() throws IOException {
         socket = new Socket(InetAddress.getLocalHost(), 3333);
     }

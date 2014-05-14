@@ -3,6 +3,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.io.IOException;
+import java.io.PrintStream;
 
 /**
  * Created by yodatak on 13/05/14.
@@ -34,14 +35,16 @@ public class Login extends JFrame{
             public void actionPerformed(ActionEvent e) {
                 try {
                     SocketClient sck = new SocketClient();
-                    if(sck.request("CONNECT " + myemailGmailComFormattedTextField.getText() + " " + passwordPasswordField.getPassword()) == "ACCEPTED"){
-
+                    PrintStream out = sck.out();
+                    out.println("CONNECT");
+                    out.println(myemailGmailComFormattedTextField.getText());
+                    if(sck.request(new String(passwordPasswordField.getPassword())).equals("ACCEPTED")){
+                        JFrame frame = new DashboardAll();
+                        frame.pack();
+                        frame.setVisible(true);
+                        capture_this.setVisible(false);
                     }
 
-                    JFrame frame = new DashboardAll();
-                    frame.pack();
-                    frame.setVisible(true);
-                    capture_this.setVisible(false);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
