@@ -28,12 +28,12 @@ public class Register extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    SocketClient sck = new SocketClient();
+                    SocketClient sck = new SocketClient(); //On Ouvre le socket du client
                     PrintStream out = sck.out();
                     out.println("REGISTER");
-                    out.println(formattedTextField1.getText());
-                    out.println(managerCheckBox.isSelected() ? "MANAGER" : "EMPLOYEE");
-                    if(sck.request(Login.encryptPassword(new String(passwordField1.getPassword()))).equals("ACCEPTED")){
+                    out.println(formattedTextField1.getText()); //On chope le texte
+                    out.println(managerCheckBox.isSelected() ? "MANAGER" : "EMPLOYEE"); //Manager ou pas ?
+                    if(sck.request(Login.encryptPassword(new String(passwordField1.getPassword()))).equals("ACCEPTED")){ //si le pass est ok on envoi la sauce !
                         JFrame frame = new DashboardAll(loginFrame);
                         frame.setLocationRelativeTo(null);
                         frame.pack();
