@@ -25,6 +25,7 @@ public class Login extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new Register();
+                frame.setLocationRelativeTo(null);
                 frame.pack();
                 frame.setVisible(true);
                 capture_this.setVisible(false);
@@ -40,11 +41,16 @@ public class Login extends JFrame{
                     out.println(myemailGmailComFormattedTextField.getText());
                     if(sck.request(new String(passwordPasswordField.getPassword())).equals("ACCEPTED")){
                         JFrame frame = new DashboardAll();
+                        frame.setLocationRelativeTo(null);
                         frame.pack();
                         frame.setVisible(true);
                         capture_this.setVisible(false);
                     }
 
+                    JFrame frame = new DashboardAll();
+                    frame.pack();
+                    frame.setVisible(true);
+                    capture_this.setVisible(false);
                 } catch (IOException e1) {
                     e1.printStackTrace();
                 }
@@ -54,6 +60,7 @@ public class Login extends JFrame{
 
     public static void main(String[] args) {
         JFrame frame = new Login();
+        frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
