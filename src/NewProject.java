@@ -7,7 +7,7 @@ import java.awt.*;
 public class NewProject extends JFrame{
     private JPanel NewProject;
     private JTextField textField1;
-    private JButton button1;
+    private JButton GOButton;
 
     public NewProject() throws HeadlessException {
         super("NewProject"); //Le titre de la fenetre
