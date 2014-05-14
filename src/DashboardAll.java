@@ -12,7 +12,7 @@ public class DashboardAll extends JFrame {
     private JTable table1;
     private JPanel Dash;
 
-    public DashboardAll(){
+    public DashboardAll(final Login loginFrame){
         super("Dashboard For All Projects");
         setContentPane(Dash);
 
@@ -21,7 +21,7 @@ public class DashboardAll extends JFrame {
         logoutButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                capture_this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                loginFrame.setVisible(true);
                 capture_this.processWindowEvent(new WindowEvent(capture_this, WindowEvent.WINDOW_CLOSING));
             }
         });

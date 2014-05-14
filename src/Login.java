@@ -44,7 +44,7 @@ public class Login extends JFrame{
                     out.println("CONNECT");
                     out.println(myemailGmailComFormattedTextField.getText());
                     if(sck.request(encryptPassword(new String(passwordPasswordField.getPassword()))).equals("ACCEPTED")){
-                        JFrame frame = new DashboardAll();
+                        JFrame frame = new DashboardAll(capture_this);
                         frame.setLocationRelativeTo(null);
                         frame.pack();
                         frame.setVisible(true);

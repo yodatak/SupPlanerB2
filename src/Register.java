@@ -18,7 +18,7 @@ public class Register extends JFrame {
     public JPanel Register;
     private JCheckBox managerCheckBox;
 
-    public Register() throws HeadlessException {
+    public Register(final Login loginFrame) throws HeadlessException {
         super("Register");
         setContentPane(Register);
 
@@ -34,7 +34,7 @@ public class Register extends JFrame {
                     out.println(formattedTextField1.getText());
                     out.println(managerCheckBox.isSelected() ? "MANAGER" : "EMPLOYEE");
                     if(sck.request(Login.encryptPassword(new String(passwordField1.getPassword()))).equals("ACCEPTED")){
-                        JFrame frame = new DashboardAll();
+                        JFrame frame = new DashboardAll(loginFrame);
                         frame.setLocationRelativeTo(null);
                         frame.pack();
                         frame.setVisible(true);
