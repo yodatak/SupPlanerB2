@@ -24,17 +24,6 @@
           <text value="&amp;Login"/>
         </properties>
       </component>
-      <component id="f75d5" class="javax.swing.JFormattedTextField" binding="myemailGmailComFormattedTextField" default-binding="true">
-        <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-          <toolTipText value="firstname.name@supinfo.com"/>
-        </properties>
-      </component>
       <component id="663c2" class="javax.swing.JPasswordField" binding="passwordPasswordField" default-binding="true">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
@@ -44,6 +33,17 @@
         <properties>
           <text value=""/>
           <toolTipText value="password"/>
+        </properties>
+      </component>
+      <component id="f75d5" class="javax.swing.JFormattedTextField" binding="myemailGmailComFormattedTextField" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+          <toolTipText value="firstname.name@supinfo.com"/>
         </properties>
       </component>
     </children>

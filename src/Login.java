@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * Created by yodatak on 13/05/14.
@@ -31,8 +32,19 @@ public class Login extends JFrame{
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                SocketClient sck = new SocketClient();
+                try {
+                    SocketClient sck = new SocketClient();
+                    if(sck.request("CONNECT " + myemailGmailComFormattedTextField.getText() + " " + passwordPasswordField.getPassword()) == "ACCEPTED"){
 
+                    }
+
+                    JFrame frame = new DashboardAll();
+                    frame.pack();
+                    frame.setVisible(true);
+                    capture_this.setVisible(false);
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }
