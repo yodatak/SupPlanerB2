@@ -29,7 +29,7 @@ public class Login extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new Register(capture_this);
-                frame.setLocationRelativeTo(null);
+                frame.setLocationRelativeTo(null);//ici on centre la fenetre
                 frame.pack();
                 frame.setVisible(true);
                 capture_this.setVisible(false);
@@ -43,9 +43,9 @@ public class Login extends JFrame{
                     PrintStream out = sck.out();
                     out.println("CONNECT");
                     out.println(myemailGmailComFormattedTextField.getText());
-                    if(sck.request(encryptPassword(new String(passwordPasswordField.getPassword()))).equals("ACCEPTED")){
+                    if(sck.request(encryptPassword(new String(passwordPasswordField.getPassword()))).equals("ACCEPTED")){ //On encrypt le pass en SHA1
                         JFrame frame = new DashboardAll(capture_this);
-                        frame.setLocationRelativeTo(null);
+                        frame.setLocationRelativeTo(null);//ici on centre la fenetre
                         frame.pack();
                         frame.setVisible(true);
                         capture_this.setVisible(false);
@@ -57,14 +57,14 @@ public class Login extends JFrame{
         });
     }
 
-    public static String encryptPassword(String password)
+    public static String encryptPassword(String password) //Notre fonction Pour encrypter le mot de passe en sha1
     {
         String sha1 = "";
         try
         {
             MessageDigest crypt = MessageDigest.getInstance("SHA-1");
             crypt.reset();
-            crypt.update(password.getBytes("UTF-8"));
+            crypt.update(password.getBytes("UTF-8"));//Un peux d'unicode ^^
             sha1 = byteToHex(crypt.digest());
         }
         catch(NoSuchAlgorithmException e)
@@ -75,10 +75,10 @@ public class Login extends JFrame{
         {
             e.printStackTrace();
         }
-        return sha1;
+        return sha1; //on retourne la string en SHA1
     }
 
-    private static String byteToHex(final byte[] hash)
+    private static String byteToHex(final byte[] hash) //fonction qui convertie notre string en Hexa pour le pass SHA1
     {
         Formatter formatter = new Formatter();
         for (byte b : hash)

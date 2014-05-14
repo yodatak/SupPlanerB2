@@ -25,5 +25,5 @@ public class SocketClient {
 
     public SocketClient() throws IOException {
         socket = new Socket(InetAddress.getLocalHost(), 3333);
-    }
+    } // On prend le port 3333
 }

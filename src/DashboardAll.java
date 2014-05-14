@@ -18,21 +18,20 @@ public class DashboardAll extends JFrame {
 
         final DashboardAll capture_this = this;
 
-        logoutButton.addActionListener(new ActionListener() {
+        logoutButton.addActionListener(new ActionListener() {  //On met un listner pour le bouton de logout
             @Override
             public void actionPerformed(ActionEvent e) {
                 loginFrame.setVisible(true);
                 capture_this.processWindowEvent(new WindowEvent(capture_this, WindowEvent.WINDOW_CLOSING));
             }
         });
-        newProjectButton.addActionListener(new ActionListener() {
+        newProjectButton.addActionListener(new ActionListener() { //On met un listner pour le bouton de Nouveau projet
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFrame frame = new NewProject();
-                frame.setLocationRelativeTo(null);
+                frame.setLocationRelativeTo(null);//ici on centre la fenetre
                 frame.pack();
                 frame.setVisible(true);
-                //capture_this.setVisible(false);
             }
         });
     }
