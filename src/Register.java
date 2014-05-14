@@ -8,10 +8,9 @@ public class Register extends JFrame {
     private JFormattedTextField formattedTextField1;
     private JPasswordField passwordField1;
     private JPasswordField passwordField2;
-    private JRadioButton employeeRadioButton;
-    private JRadioButton managerRadioButton;
     private JButton validateButton;
     public JPanel Register;
+    private JCheckBox managerCheckBox;
 
     public Register() throws HeadlessException {
         super("Register");
